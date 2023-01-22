@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace FinanceApp.Models.ENUMS
 {
-    internal class Class1
+    public enum EnterteinmentCategories
     {
+        Cinema,
+        Bar,
+        Gifts,
+        Restaurant,
+        Games,
+        Sports,
+        Other,
     }
 }

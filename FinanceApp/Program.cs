@@ -1,3 +1,7 @@
+using FinanceApp.dataaccess;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+
 namespace FinanceApp
 {
     public class Program
@@ -8,7 +12,7 @@ namespace FinanceApp
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddDbContext<FinanceAppContext>(options => options.UseSqlServer("Data Source=45.33.54.205;Initial Catalog=financeapp;User Id=sa;Password=^Z]-[9y[EmZ+mk;"));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

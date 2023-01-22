@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FinanceApp.Models
 {
-    internal class General:Expense
+    public class General:Expense
     {
         public ExpenseCategories Categories { get; set; }
     }

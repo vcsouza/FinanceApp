@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace FinanceApp.Models.ENUMS
 {
-    internal class Class1
+    public enum ExpenseCategories
     {
+        Groceries,
+        Bills,
+        Transportion,
+        Pharmacy,
+        HealthCare,
+        Pets,
     }
 }
