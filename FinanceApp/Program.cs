@@ -11,8 +11,8 @@ namespace FinanceApp
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
-            builder.Services.AddDbContext<FinanceAppContext>(options => options.UseSqlServer("Data Source=45.33.54.205;Initial Catalog=financeapp;User Id=sa;Password=^Z]-[9y[EmZ+mk;"));
+            builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            builder.Services.AddDbContext<FinanceAppContext>(options => options.UseSqlServer("Data Source=45.79.34.191;Initial Catalog=financeapp;User Id=sa;Password=^Z]-[9y[EmZ+mk;"));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

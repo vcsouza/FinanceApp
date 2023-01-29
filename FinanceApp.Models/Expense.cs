@@ -1,11 +1,14 @@
-﻿namespace FinanceApp.Models
+﻿using FinanceApp.Models;
+
+namespace FinanceApp.Models
 {
     public abstract class Expense
     {
-        public int id { get; set; }
-        public double expenseValue { get; set; }
-        public String description { get; set; }
+        public int ID { get; set; }
+        public decimal ExpenseValue { get; set; }
+        public String Description { get; set; } = null!;
 
-        public DateTime date { get; set; }
+        public DateTime Date { get; set; }
     }
 }
+

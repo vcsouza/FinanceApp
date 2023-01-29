@@ -1,0 +1,31 @@
+﻿@model FinanceApp.ViewModels.CreateGeneralCategoryVM;
+@using FinanceApp.Models.ENUMS;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form asp-controller="Expense" method="post" asp-action="RegisterGeneralExpense">
+    <div  class="mb-3">
+        <label asp-for="ExpenseCategory" class="form-label">Expense Category</label>
+
+        <select asp-for="ExpenseCategory" class="form-select" asp-items="@Html.GetEnumSelectList<ExpenseCategories>()" aria-label="Default select example">
+        <option selected>Select your expense category</option>
+    </select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ExpenseValue" class="form-label">Expense Amount</label>
+        <input asp-for="ExpenseValue" type="number" class="form-control" placeholder="Expense amount">
+    </div>
+    <div class="mb-3">
+        <label asp-for="ExpenseDate" class="form-label">Expense Date</label>
+        <input asp-for="ExpenseDate" type="date" class="form-control" placeholder="Expense amount">
+    </div>
+    <div class="mb-3">
+        <label asp-for="ExpenseDescription" class="form-label">Expense Description</label>
+        <textarea asp-for="ExpenseDescription" class="form-control" rows="3"></textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit your expense</button>
+</form>
